@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Teachers - Struggle School</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">Struggle School</a>
+                </div>
+                <!-- Hamburger button -->
+                <button class="md:hidden hamburger-btn p-2" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="hamburger-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="hamburger-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html#about" class="nav-link">About</a>
+                        <a href="index.html#programs" class="nav-link">Programs</a>
+                        <a href="index.html#gallery" class="nav-link">Gallery</a>
+                        <a href="#" class="nav-link active">Teachers</a>
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="index.html#about" class="mobile-nav-link">About</a>
+                <a href="index.html#programs" class="mobile-nav-link">Programs</a>
+                <a href="index.html#gallery" class="mobile-nav-link">Gallery</a>
+                <a href="#" class="mobile-nav-link">Teachers</a>
+                <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Teachers Header -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl font-bold text-blue-800 mb-6">Our Teaching Staff</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Meet our dedicated team of educators who are passionate about shaping the future through education.</p>
+        </div>
+    </section>
+
+    <!-- Teachers Grid -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher 1 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Sarah Johnson" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Sarah Johnson</h3>
+                            <p>Mathematics</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in Mathematics, Stanford University</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">10+ years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Advanced Calculus, Linear Algebra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 2 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Michael Chen" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Michael Chen</h3>
+                            <p>Physics</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in Physics, MIT</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">8 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Quantum Physics, Mechanics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 3 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Emma Davis" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Emma Davis</h3>
+                            <p>Literature</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.A. in English Literature, Oxford</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">12 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Creative Writing, Poetry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 4 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Robert Wilson" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Robert Wilson</h3>
+                            <p>Computer Science</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.Sc. in Computer Science, Berkeley</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">15 years industry & teaching</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">AI, Web Development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 5 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956" alt="Jennifer Martinez" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Jennifer Martinez</h3>
+                            <p>Biology</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in Biology, Harvard</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">7 years research & teaching</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Molecular Biology, Genetics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 6 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="David Kim" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">David Kim</h3>
+                            <p>Chemistry</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in Chemistry, Yale</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">9 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Organic Chemistry, Biochemistry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 7 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Laura Thompson" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Laura Thompson</h3>
+                            <p>History</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in History, Cambridge</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">11 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">World History, Ancient Civilizations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 8 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c" alt="James Anderson" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">James Anderson</h3>
+                            <p>Physical Education</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.Sc. in Sports Science</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">13 years coaching & teaching</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Sports Training, Fitness</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 9 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Maria Garcia" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Maria Garcia</h3>
+                            <p>Spanish</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.A. in Spanish Literature</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">8 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Spanish Language & Culture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 10 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857" alt="Thomas Brown" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Thomas Brown</h3>
+                            <p>Music</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.Mus. in Music Education</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">15 years performance & teaching</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Orchestra, Music Theory</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 11 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1590086782957-93c06ef21604" alt="Rachel Lee" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Rachel Lee</h3>
+                            <p>Art</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">M.F.A. in Fine Arts</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">10 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Drawing, Painting, Digital Art</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher 12 -->
+                <div class="teacher-card glass-card p-6">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c" alt="Daniel Smith" class="w-full h-64 object-cover rounded-lg">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-700 rounded text-white">
+                            <h3 class="text-xl font-bold">Daniel Smith</h3>
+                            <p>Geography</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Education</h4>
+                            <p class="text-gray-600">Ph.D. in Geography</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Experience</h4>
+                            <p class="text-gray-600">9 years teaching experience</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700">Specialization</h4>
+                            <p class="text-gray-600">Environmental Geography, GIS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; <span id="currentYear"></span> Struggle School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="teachers.js"></script>
+</body>
+</html> 

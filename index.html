@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struggle School - Empowering Future Leaders</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-blue-600">Struggle School</h1>
+                </div>
+                <!-- Hamburger button -->
+                <button class="md:hidden hamburger-btn p-2" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="hamburger-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="hamburger-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#programs" class="nav-link">Programs</a>
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                        <a href="#teachers" class="nav-link">Teachers</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#programs" class="mobile-nav-link">Programs</a>
+                <a href="#gallery" class="mobile-nav-link">Gallery</a>
+                <a href="#teachers" class="mobile-nav-link">Teachers</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="glass-card max-w-4xl mx-auto text-center p-8 relative z-10">
+            <h1 class="text-5xl font-bold mb-6 text-blue-800 hero-title">Welcome to Struggle School</h1>
+            <p class="text-xl text-gray-700 mb-8 hero-text">Empowering minds, shaping futures, and building tomorrow's leaders</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 hero-btn">
+                Get Started
+            </button>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="School Building" class="w-full h-full object-cover opacity-20">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">About Us</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-text">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Founded in 2010, Struggle School has been at the forefront of educational innovation. We believe in nurturing not just academic excellence, but also character development and life skills.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Our unique approach combines traditional teaching methods with modern technology and practical learning experiences.
+                    </p>
+                </div>
+                <div class="glass-card p-6">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45" alt="Students studying" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Our Programs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="program-card glass-card p-6">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Primary Education" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Primary Education</h3>
+                    <p class="text-gray-700">Building strong foundations through engaging and interactive learning experiences.</p>
+                </div>
+                <div class="program-card glass-card p-6">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Secondary Education" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Secondary Education</h3>
+                    <p class="text-gray-700">Comprehensive curriculum focused on academic excellence and personal growth.</p>
+                </div>
+                <div class="program-card glass-card p-6">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Extra Curricular" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Extra Curricular</h3>
+                    <p class="text-gray-700">Diverse activities to develop talents and foster creativity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Our Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="School Event" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">School Events</h3>
+                        <p class="text-gray-600">Annual cultural celebrations and activities</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6" alt="Library" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">Modern Library</h3>
+                        <p class="text-gray-600">Well-equipped learning resources</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" alt="Sports" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">Sports Facilities</h3>
+                        <p class="text-gray-600">State-of-the-art sports facilities</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Lab" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">Science Labs</h3>
+                        <p class="text-gray-600">Advanced science laboratories</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Art Class" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">Art Classes</h3>
+                        <p class="text-gray-600">Creative expression through various art mediums</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card p-4 transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1558021212-51b6ecfa0db9" alt="Music Room" class="w-full h-64 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-blue-700">Music Room</h3>
+                        <p class="text-gray-600">A place for musical creativity and expression</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Our Teachers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="teacher-card glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Sarah Johnson" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">Sarah Johnson</h3>
+                    <p class="text-gray-600 mb-2">Mathematics</p>
+                    <p class="text-sm text-gray-500">Ph.D. in Mathematics</p>
+                </div>
+                <div class="teacher-card glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Michael Chen" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">Michael Chen</h3>
+                    <p class="text-gray-600 mb-2">Physics</p>
+                    <p class="text-sm text-gray-500">Ph.D. in Physics</p>
+                </div>
+                <div class="teacher-card glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Emma Davis" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">Emma Davis</h3>
+                    <p class="text-gray-600 mb-2">Literature</p>
+                    <p class="text-sm text-gray-500">M.A. in English</p>
+                </div>
+                <div class="teacher-card glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Robert Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">Robert Wilson</h3>
+                    <p class="text-gray-600 mb-2">Computer Science</p>
+                    <p class="text-sm text-gray-500">M.Sc. in CS</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="teachers.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Teachers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-800">Contact Us</h2>
+            <div class="glass-card p-8">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full p-3 rounded-lg bg-white bg-opacity-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full p-3 rounded-lg bg-white bg-opacity-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full p-3 rounded-lg bg-white bg-opacity-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; <span id="currentYear"></span> Struggle School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
